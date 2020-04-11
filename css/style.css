@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial,
+    Sans-serif;
+  background-color: transparent;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #111111;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  background: #111;
+  height: 62px;
+  padding: 0 5%;
+  width: 90%;
+  position: absolute;
+  z-index: 1000;
+  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+header nav {
+  /* display: none; */
+  background: #222;
+  position: absolute;
+  top: 62px;
+  right: 0px;
+  z-index: 1000;
+  width: 100%;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  height: 3rem;
+  list-style: none;
+  display: block;
+  border-top: #212121 solid 1px;
+  border-bottom: #363636 solid 1px;
+}
+
+header nav li a {
+  display: block;
+  color: #fff;
+  line-height: 3rem;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  background: url(images/logo.png) 0px 0px / contain no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 11px 0;
+}
+
+.icon-nav {
+  height: 40px;
+  float: right;
+  display: inline-block;
+  margin: 11px 0;
+  color: #fff;
+}
+
+@media only screen and (min-width: 830px) {
+  .logo {
+    height: 60px;
+    width: 60px;
+    margin: 16px 0 0;
+  }
+
+  .icon-nav {
+    display: none;
+  }
+
+  header {
+    height: auto;
+  }
+
+  header nav {
+    float: right;
+    display: block;
+    position: static;
+    background: transparent;
+    width: auto;
+  }
+
+  header nav li {
+    display: inline-block;
+    float: left;
+    position: relative;
+    height: 92px;
+    border: 0px;
+  }
+
+  header nav li a {
+    line-height: 92px;
+    padding: 0 1em;
+    text-decoration: none;
+  }
+}
