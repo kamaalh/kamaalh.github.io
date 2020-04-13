@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,19 +10,35 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial,
-    Sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: transparent;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   color: #111111;
   text-rendering: optimizeLegibility;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-item {
+  width: 100%;
 }
 
 .headerBG {
   height: 62px;
   padding: 0 5%;
-  width: 90%;
+  width: 100%;
   position: absolute;
   background: #111;
   z-index: 1000;
@@ -31,7 +51,6 @@ header nav {
   right: 0px;
   z-index: 10;
   width: 100%;
-  font-size: 24px;
   font-size: 1.5rem;
   text-align: center;
   transition: 0.5s;
@@ -47,8 +66,7 @@ header nav ul {
 }
 
 header nav li {
-  height: 3rem;
-  list-style: none;
+  height: 4rem;
   display: block;
   border-top: #212121 solid 1px;
   border-bottom: #363636 solid 1px;
@@ -57,7 +75,7 @@ header nav li {
 header nav li a {
   display: block;
   color: #fff;
-  line-height: 3rem;
+  line-height: 4rem;
   text-decoration: none;
   text-transform: lowercase;
 }
@@ -77,21 +95,60 @@ header nav li a {
   display: inline-block;
   margin: 11px 0;
   color: #fff;
+  font-size: 30px;
 }
 
 .icon-nav.active {
   opacity: 0.5;
 }
 
+.content {
+  /* padding: 60px 30px; */
+}
+
 .page {
   height: 100vh;
-  padding: 60px 10px;
-  font-size: 65px;
-  color: #fff;
+  padding: 60px 10%;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  font-family: "Baloo Paaji 2", cursive;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  /* color: #666666; */
+  font-size: 1.125rem;
+}
+
+p.intro {
+  font-size: 1.5rem;
+}
+
+.avatar {
+  font-size: 150px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.fact-list {
+  text-align: center;
+  line-height: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 #about {
   background-color: khaki;
+  height: auto;
 }
 #skills {
   background-color: aqua;
@@ -104,6 +161,14 @@ header nav li a {
 }
 
 @media only screen and (min-width: 830px) {
+  .flex-container {
+    flex-direction: row;
+  }
+
+  .flex-item {
+    width: 50%;
+  }
+
   .headerBG {
     height: 92px;
     z-index: initial;
