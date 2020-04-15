@@ -17,6 +17,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-item {
+  flex: 1;
+}
+
 ul {
   padding: 0;
 }
@@ -25,14 +35,38 @@ li {
   list-style: none;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+img {
+  width: 100%;
 }
 
-.flex-item {
-  width: 100%;
+.pad-10 {
+  padding: 10%;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.shadow {
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  font-family: "Baloo Paaji 2", cursive;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  color: #666666;
+  font-size: 1.125rem;
 }
 
 .headerBG {
@@ -83,7 +117,7 @@ header nav li a {
 .logo {
   height: 40px;
   width: 40px;
-  background: url(images/logo.png) 0px 0px / contain no-repeat;
+  background: url(../media/images/logo.png) 0px 0px / contain no-repeat;
   display: inline-block;
   text-indent: -9999px;
   margin: 11px 0;
@@ -103,70 +137,47 @@ header nav li a {
 }
 
 .content {
-  /* padding: 60px 30px; */
+  padding-top: 62px;
 }
 
 .page {
-  height: 100vh;
-  padding: 60px 10%;
-}
-
-h1,
-h2 {
-  font-size: 3rem;
-  font-family: "Baloo Paaji 2", cursive;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1.125rem;
-  /* color: #666666; */
-  font-size: 1.125rem;
+  padding: 30px 10%;
+  border-bottom: #dddddd solid 1px;
 }
 
 p.intro {
   font-size: 1.5rem;
 }
 
-.avatar {
-  font-size: 150px;
-  width: 100%;
-  display: block;
-  text-align: center;
+.frame {
+  background-color: #009fee;
+  padding: 12px 12px 6px;
+  border-radius: 10px;
 }
 
 .fact-list {
   text-align: center;
   line-height: 2.5rem;
-  margin-top: 2.5rem;
+  margin: 0 -14%;
+  padding-top: 10px;
+}
+
+.fact-list li {
+  color: #666;
 }
 
 #about {
-  background-color: khaki;
   height: auto;
 }
-#skills {
-  background-color: aqua;
-}
-#work {
-  background-color: blueviolet;
-}
+#skills,
+#work,
 #blogs {
-  background-color: coral;
+  height: 100vh;
 }
 
 @media only screen and (min-width: 830px) {
   .flex-container {
     flex-direction: row;
-  }
-
-  .flex-item {
-    width: 50%;
   }
 
   .headerBG {
