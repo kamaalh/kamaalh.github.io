@@ -1,5 +1,6 @@
-const nav = document.getElementsByTagName("nav")[0];
-const navIcon = document.getElementsByClassName("icon-nav")[0];
+const nav = document.querySelector("nav");
+const navIcon = document.querySelector(".icon-nav");
+const content = document.querySelector(".content");
 
 const toggleNav = () => {
   navIcon.classList.toggle("active");
@@ -8,3 +9,6 @@ const toggleNav = () => {
 
 navIcon.addEventListener("click", toggleNav);
 nav.addEventListener("click", toggleNav);
+content.addEventListener("click", () => {
+  nav.classList.contains("active") && toggleNav();
+});
